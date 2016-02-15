@@ -40,16 +40,6 @@ on Ubuntu/Debian `sudo apt-get install pyqt4-dev-tools`
 
 ![alt tag](screenshot/cli.png)
 
-## How to use the GUI version
-
-* Clone the repository `git clone git@github.com:Pinperepette/IPTV.git`
-* `cd` into `iptv`
-* run `pip install -r requirements.txt` in order to get the full dependencies
-* run `python iptv_gui.py`
-* you can see an example of the GUI in the image below
-
-![alt tag](screenshot/gui.png)
-
 ## Compatibility
 
 This program work on Window, Linux, Mac OSX and BSD. The only requirement is
