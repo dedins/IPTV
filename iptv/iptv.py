@@ -64,7 +64,8 @@ while True:
         print colored.blue("Attacking all")
         for index, server in enumerate(cr.parsedUrls):
             print "Attacking: [" + str(index) + "] -         " + server
-            cr.search_accounts(server)
+            result = cr.search_accounts(server)
+            print colored.green(result)
             time.sleep(60)
     else:
         print colored.red("Option not recognized")
