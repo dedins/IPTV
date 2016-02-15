@@ -24,7 +24,7 @@ def menu():
     print "3 - Select language, default is Italian"
     print "4 - Brute force random server from the list"
     print "5 - Brute force specific server from the list"
-    print "6 - Provide a random server to attack"
+    print "6 - Attack all"
     print ""
 
 while True:
@@ -61,6 +61,10 @@ while True:
         except ValueError as e:
             print colored.red("You have entered a wrong value, please provide a NUMBER. Use option 2 first")
     elif choosenMenu == 6:
-        print colored.blue("coming soon...")
+        print colored.blue("Attacking all")
+        for index, server in enumerate(cr.parsedUrls):
+            print "Attacking: [" + str(index) + "] -         " + server
+            cr.search_accounts(server)
+            time.sleep(60)
     else:
         print colored.red("Option not recognized")
