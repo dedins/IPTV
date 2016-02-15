@@ -36,7 +36,7 @@ while True:
     elif choosenMenu == 1:
         print colored.green("Fetching URLs plase wait...")
         cr.search_links()
-        print colored.green("Done, 30 URLs founded")
+        print colored.green("Done,"+result_number+"URLs founded")
     elif choosenMenu == 2:
         print colored.green("Printing server list")
         for index, server in enumerate(cr.parsedUrls):
