@@ -25,6 +25,8 @@ class Crawler(object):
     basicString = "/get.php?username=%s&password=%s&type=m3u&output=mpegts"
     # string used to search the CMS
     searchString = "Xtream Codes v1.0.59.5"
+    # results number
+    result_number = '30'
 
     def __init__(self, language = "it"):
         """Default constructor
@@ -59,7 +61,7 @@ class Crawler(object):
         We set the limit of 30 links because this script serve as demonstration and it's
         not intended to be use for personal purpose.
         """
-        for url in google.search(self.searchString, num=30, stop=1):
+        for url in google.search(self.searchString, num=result_number, stop=1):
             parsed = urlparse(url)
             self.parsedUrls.append(parsed.scheme + "://" + parsed.netloc)
 
